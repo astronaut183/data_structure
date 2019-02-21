@@ -8,10 +8,11 @@ public class LinkListImpl implements LinkList {
     private Node head;
     private Node cur;
 
-    public LinkListImpl() {
-        this.size = 0;
-        cur = null;
-    }
+//    public LinkListImpl() {
+//        this.size = 0;
+//        cur = null;
+//        head = null;
+//    }
 
     private class Node {
         int data;
@@ -37,9 +38,23 @@ public class LinkListImpl implements LinkList {
     }
 
     @Override
+    public int get(int curr) {
+        if (curr > size) {
+            return -1;
+        }
+        Node cur = head;
+        for (int i = 1; i < curr; i++) {
+            cur = cur.next;
+        }
+        return cur.data;
+    }
+
+    @Override
     public void insert(int curr, int data) {
-        if (curr == size) {
-            add(data);
+        if (curr == 1) {
+            Node node = new Node(data);
+            node.next = head;
+            head = node;
         } else {
             Node point = head;
             Node node = new Node(data);
@@ -48,8 +63,9 @@ public class LinkListImpl implements LinkList {
             }
             node.next = point.next;
             point.next = node;
-            size++;
         }
+        size++;
+
     }
 
     @Override
@@ -66,6 +82,8 @@ public class LinkListImpl implements LinkList {
             }
             System.out.println("");
         }
+
+
     }
 
     @Override
@@ -76,7 +94,7 @@ public class LinkListImpl implements LinkList {
             if (cur == 1) {
                 head = head.next;
                 size--;
-            }else{
+            } else {
                 Node prePoint = head;
                 Node curPoint = prePoint.next;
                 for (int i = 2; i < cur; i++) {
@@ -88,5 +106,10 @@ public class LinkListImpl implements LinkList {
             }
 
         }
+    }
+
+    @Override
+    public int getSize() {
+        return size;
     }
 }
