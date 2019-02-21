@@ -2,6 +2,7 @@ package zyh.data.main;
 
 import zyh.data.service.LinkList;
 import zyh.data.service.Queue;
+import zyh.data.service.Stack;
 
 import java.util.Collection;
 import java.util.Iterator;
@@ -31,5 +32,13 @@ public class App {
         int q = queue.pop();
         System.out.println(q);
         queue.display();
+
+
+        Stack stack = new StackImpl();
+        stack.put(1);
+        stack.put(2);
+        stack.put(3);
+        stack.put(4);
+        System.out.println(stack.pop());
     }
 }
