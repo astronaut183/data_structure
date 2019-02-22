@@ -40,5 +40,30 @@ public class App {
         stack.put(3);
         stack.put(4);
         System.out.println(stack.pop());
+        
+        
+        //binary tree
+        BinaryTree binaryTree = new BinaryTree();
+
+        System.out.println("前序递归");
+        binaryTree.theFirstOrderTraversal(binaryTree.getRoot());
+        System.out.println("");
+        System.out.println("中序递归");
+        binaryTree.theInOrderTraversal(binaryTree.getRoot());
+        System.out.println("");
+        System.out.println("后序递归");
+        binaryTree.thePostOrderTraversal(binaryTree.getRoot());
+        System.out.println("");
+        System.out.println("前序非递归");
+        binaryTree.preOrderNonRecursive(binaryTree.getRoot());
+        System.out.println("");
+        System.out.println("中序非递归");
+        binaryTree.inOrderNonRecursive(binaryTree.getRoot());
+        System.out.println("");
+        System.out.println("后序非递归");
+        binaryTree.postOrderNonRecursive(binaryTree.getRoot());
+        System.out.println("");
+        System.out.println("层序");
+        binaryTree.levelOrderTraversal(binaryTree.getRoot());
     }
 }
