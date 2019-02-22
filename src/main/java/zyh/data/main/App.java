@@ -13,6 +13,7 @@ import java.util.Iterator;
 public class App {
     public static void main(String[] args) {
         //System.out.println( "Hello World!" );
+        //linklist
         LinkList linkList = new LinkListImpl();
         linkList.add(1);
         linkList.add(2);
@@ -25,6 +26,7 @@ public class App {
         linkList.display();
         System.out.println(linkList.get(3));
 
+        //queue
         Queue queue = new QueueImpl();
         queue.put(1);
         queue.put(2);
@@ -34,6 +36,7 @@ public class App {
         queue.display();
 
 
+        //stack
         Stack stack = new StackImpl();
         stack.put(1);
         stack.put(2);
