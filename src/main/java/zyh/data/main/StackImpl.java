@@ -25,7 +25,7 @@ public class StackImpl implements Stack {
         return data;
     }
 
-    public boolean inempty() {
+    public boolean isEmpty() {
         return top == -1;
     }
 }

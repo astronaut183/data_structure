@@ -5,5 +5,5 @@ public interface Stack {
 
     int pop();
 
-    boolean inempty();
+    boolean isEmpty();
 }
