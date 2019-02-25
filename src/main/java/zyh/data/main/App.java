@@ -13,6 +13,7 @@ import java.util.Iterator;
 public class App {
     public static void main(String[] args) {
         //System.out.println( "Hello World!" );
+        //linklist
         LinkList linkList = new LinkListImpl();
         linkList.add(1);
         linkList.add(2);
@@ -25,6 +26,7 @@ public class App {
         linkList.display();
         System.out.println(linkList.get(3));
 
+        //queue
         Queue queue = new QueueImpl();
         queue.put(1);
         queue.put(2);
@@ -34,11 +36,37 @@ public class App {
         queue.display();
 
 
+        //stack
         Stack stack = new StackImpl();
         stack.put(1);
         stack.put(2);
         stack.put(3);
         stack.put(4);
         System.out.println(stack.pop());
+        
+        
+        //binary tree
+        BinaryTree binaryTree = new BinaryTree();
+
+        System.out.println("前序递归");
+        binaryTree.theFirstOrderTraversal(binaryTree.getRoot());
+        System.out.println("");
+        System.out.println("中序递归");
+        binaryTree.theInOrderTraversal(binaryTree.getRoot());
+        System.out.println("");
+        System.out.println("后序递归");
+        binaryTree.thePostOrderTraversal(binaryTree.getRoot());
+        System.out.println("");
+        System.out.println("前序非递归");
+        binaryTree.preOrderNonRecursive(binaryTree.getRoot());
+        System.out.println("");
+        System.out.println("中序非递归");
+        binaryTree.inOrderNonRecursive(binaryTree.getRoot());
+        System.out.println("");
+        System.out.println("后序非递归");
+        binaryTree.postOrderNonRecursive(binaryTree.getRoot());
+        System.out.println("");
+        System.out.println("层序");
+        binaryTree.levelOrderTraversal(binaryTree.getRoot());
     }
 }
