@@ -26,6 +26,7 @@ public class SortImpl implements Sort {
      * 选择排序
      * 两个循环，第一个循环负责全局遍历，第二个循环负责找出循环中最小的值，然后放到最前面
      * 内循环运行一次，找出一个循环中最小值放到最前面，外循环执行完，数组有序
+     *
      * @param data
      */
     @Override
@@ -44,6 +45,7 @@ public class SortImpl implements Sort {
      * 插入排序
      * 两个循环，外循环负责全局遍历，内循环负责维护一个有序的子数组，外循环执行一次，往有序的子数组中插入一个值，
      * 内循环使子数组有序
+     *
      * @param data
      */
     @Override
@@ -60,11 +62,12 @@ public class SortImpl implements Sort {
     }
 
     /**
-     *快速排序
+     * 快速排序
      * 分两步：找到一个数的位置，然后将数组分为两部分，分别再进行快排
      * 确定数的位置：从high开始，寻找比数小的值交换，位置为新high，之后从low开始，寻找比数大的值交换，位置为新low，
      * 直到low=high，最后low或high的位置就是数的最终位置，然后返回
      * 对数的两端，分别再进行快排
+     *
      * @param data
      * @param low
      * @param high
@@ -95,6 +98,7 @@ public class SortImpl implements Sort {
      * 归并排序
      * 将数组对半分，一直分到每个字数组只有1个数
      * 然后进行合并，合并后的数组有序，然后两个有序数组合并，最后全部有序
+     *
      * @param data
      * @param low
      * @param high
@@ -127,6 +131,22 @@ public class SortImpl implements Sort {
         for (int x = 0; x < temp.length; x++) data[low + x] = temp[x];
     }
 
+    public void heapSort1(int[] data) {
+        HeapImpl heap = new HeapImpl();
+        for (int num : data) {
+            heap.insert(num);
+        }
+        for (int i = data.length - 1; i >= 0; i--) {
+            data[i] = heap.extractMax();
+        }
+    }
+
+    public void heapSort2(int[] data) {
+        HeapImpl heap = new HeapImpl(data);
+        for (int i = data.length - 1; i >= 0; i--) {
+            data[i] = heap.extractMax();
+        }
+    }
 
     private void swap(int a, int b, int[] data) {
         int temp;

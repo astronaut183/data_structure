@@ -10,4 +10,8 @@ public interface Sort {
     void margeSort(int[] data, int low, int high);
 
     void selectSort(int[] data);
+
+    void heapSort1(int[] data);
+
+    void heapSort2(int[] data);
 }
