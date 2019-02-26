@@ -15,13 +15,19 @@ public class HeapImpl implements Heap {
         data = new ArrayList<>();
     }
 
+
+    /**
+     * 从最后一个叶节点的父节点开始，进行shiftDown操作，使以该父节点为根节点的树变成大根堆
+     * @param numbers
+     */
     HeapImpl(int[] numbers) {
         data = new ArrayList<>();
         for (int i = 0; i < numbers.length; i++)
             data.add(numbers[i]);
 
-        count = numbers.length;
-        for (int i = count - 1 / 2; i >= 1; i--) shiftDown(i);
+        count = numbers.length - 1;
+        for (int i = (count - 1) / 2; i >= 0; i--)
+            shiftDown(i);
     }
 
     @Override
@@ -48,13 +54,13 @@ public class HeapImpl implements Heap {
      * @param k
      */
     private void shiftUp(int k) {
-        while (k > 0 && data.get((k - 1) / 2) < data.get(k)) {
+        while (k >= 0 && data.get((k - 1) / 2) < data.get(k)) {
             swap((k - 1) / 2, k, data);
             k = (k - 1) / 2;
         }
     }
 
-
+    @Override
     public int extractMax() {
         if (isEmpty()) return -1;
         int result = data.get(0);

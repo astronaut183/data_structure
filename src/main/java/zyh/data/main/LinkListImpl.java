@@ -24,6 +24,7 @@ public class LinkListImpl implements LinkList {
         }
     }
 
+
     @Override
     public void add(int data) {
         Node node = new Node(data);
@@ -85,6 +86,7 @@ public class LinkListImpl implements LinkList {
 
 
     }
+
 
     @Override
     public void delete(int cur) {
