@@ -71,11 +71,27 @@ public class App {
 //        binaryTree.levelOrderTraversal(binaryTree.getRoot());
 
 
-        int[] data = {1, 6, 5, 2, 9};
-        Sort sort = new SortImpl();
-        sort.heapSort2(data);
-        for (int d : data) {
-            System.out.println(d);
-        }
+//        int[] data = {1, 6, 5, 2, 9};
+//        Sort sort = new SortImpl();
+//        sort.heapSort2(data);
+//        for (int d : data) {
+//            System.out.println(d);
+//        }
+
+        StackAndQueue stackAndQueue = new StackAndQueue();
+//        stackAndQueue.TwoStackBeQueue();
+        stackAndQueue.TwoQueueBeStack();
+
+//        IntArray array = new IntArray(2);
+//        array.add(1);
+//        System.out.println(array.getSize());
+//        array.add(2);
+//        System.out.println(array.getSize());
+//        array.add(3);
+//        System.out.println(array.getSize());
+//        array.add(4);
+//        System.out.println(array.getSize());
+
+
     }
 }
