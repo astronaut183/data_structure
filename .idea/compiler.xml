@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="data_structure" />
+        <module name="datas_tructure" />
       </profile>
     </annotationProcessing>
   </component>

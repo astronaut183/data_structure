@@ -78,9 +78,9 @@ public class App {
 //            System.out.println(d);
 //        }
 
-        StackAndQueue stackAndQueue = new StackAndQueue();
+//        StackAndQueue stackAndQueue = new StackAndQueue();
 //        stackAndQueue.TwoStackBeQueue();
-        stackAndQueue.TwoQueueBeStack();
+//        stackAndQueue.TwoQueueBeStack();
 
 //        IntArray array = new IntArray(2);
 //        array.add(1);
@@ -92,6 +92,16 @@ public class App {
 //        array.add(4);
 //        System.out.println(array.getSize());
 
+//        Mid mid = new Mid();
+//        mid.midem(data);
+//    }
 
+        Backpack backpack = new Backpack();
+        int[] w = {1,2,3};
+        int[] v = {6,10,12};
+        int size = 5;
+        System.out.println(backpack.recursiveBackpack1(w,v,size));
+        System.out.println(backpack.recursiveBackpack2(w,v,size));
+        System.out.println(backpack.backpack(w,v,size));
     }
 }
