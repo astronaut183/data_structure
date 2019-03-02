@@ -1,9 +1,6 @@
 package zyh.data.main;
 
-import zyh.data.service.LinkList;
-import zyh.data.service.Queue;
-import zyh.data.service.Sort;
-import zyh.data.service.Stack;
+import zyh.data.service.*;
 
 import java.util.Collection;
 import java.util.Iterator;
@@ -96,12 +93,23 @@ public class App {
 //        mid.midem(data);
 //    }
 
-        Backpack backpack = new Backpack();
-        int[] w = {1,2,3};
-        int[] v = {6,10,12};
-        int size = 5;
-        System.out.println(backpack.recursiveBackpack1(w,v,size));
-        System.out.println(backpack.recursiveBackpack2(w,v,size));
-        System.out.println(backpack.backpack(w,v,size));
+//        Backpack backpack = new Backpack();
+//        int[] w = {1,2,3};
+//        int[] v = {6,10,12};
+//        int size = 5;
+//        System.out.println(backpack.recursiveBackpack1(w,v,size));
+//        System.out.println(backpack.recursiveBackpack2(w,v,size));
+//        System.out.println(backpack.backpack(w,v,size));
+
+        GraphMatrix graphMatrix = new GraphMatrixImpl(5);
+        graphMatrix.addBrim(1,0,1);
+        graphMatrix.addBrim(1,2,1);
+        graphMatrix.addBrim(3,2,1);
+        graphMatrix.addBrim(3,1,1);
+        graphMatrix.addBrim(1,4,1);
+        graphMatrix.display();
+        //graphMatrix.dfsGraph();
+        //graphMatrix.bfsGraph();
+        graphMatrix.TopologicalGraph();
     }
 }
