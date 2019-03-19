@@ -9,7 +9,7 @@ public class BinaryTree {
 
     private Node root;
 
-    private class Node{
+    public class Node{
         private int data;
         private Node leftChind;
         private Node rightChind;
