@@ -1,5 +1,9 @@
 package zyh.data.main;
 
+import zyh.data.service.LinkList;
+
+import java.util.*;
+
 public class AddBigInt {
 
     public static void addBigInt(StringBuilder num1, StringBuilder num2, int pos,
@@ -45,12 +49,10 @@ public class AddBigInt {
         StringBuilder num2 = new StringBuilder("456789456123456789");
         System.out.println(addBigInt(num1, num2));
 
-        int a=1;
-        int b=0;
+        ArrayDeque<Integer> a = new ArrayDeque<>();
+        Set<Integer> b = new HashSet<>();
+        Map<Integer,Integer> c = new HashMap<>();
+        ArrayList<Integer> d = new ArrayList<>();
 
-        a ^= b;
-        b ^= a;
-        a ^= b;
-        System.out.println(a+"  "+b);
     }
 }
